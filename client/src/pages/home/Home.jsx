@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" + search);
+      const res = await axios.get("https://tiny-jade-rhinoceros-boot.cyclic.app/posts" + search);
       setPosts(res.data);
     };
     fetchPosts();
