@@ -23,11 +23,11 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/upload", data);
+        await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/posts", newPost);
+      const res = await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/api/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {}
   };

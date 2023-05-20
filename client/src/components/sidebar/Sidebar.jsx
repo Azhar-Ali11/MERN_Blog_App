@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("https://tiny-jade-rhinoceros-boot.cyclic.app/categories");
+      const res = await axios.get("https://tiny-jade-rhinoceros-boot.cyclic.app/api/categories");
       setCats(res.data);
     };
     getCats();

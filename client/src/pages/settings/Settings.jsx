@@ -30,11 +30,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/upload", data);
+        await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.put("https://tiny-jade-rhinoceros-boot.cyclic.app/users/" + user._id, updatedUser);
+      const res = await axios.put("https://tiny-jade-rhinoceros-boot.cyclic.app/api/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

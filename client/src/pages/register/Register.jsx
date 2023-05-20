@@ -13,7 +13,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/auth/register", {
+      const res = await axios.post("https://tiny-jade-rhinoceros-boot.cyclic.app/api/auth/register", {
         username,
         email,
         password,
